@@ -1,5 +1,6 @@
 library(plotly) 
 library(shiny)
+library(gmp)
 
 # Define UI for application that plots a time series
 ui <- fluidPage(
@@ -33,7 +34,7 @@ server <- function(input, output) {
     path = vector() 
     i = 1 
     while(n > 1){
-      if(n %% 2 == 1){
+      if(mod.bigz(n, 2) == 1){
         n = 3 * n + 1
         path[[i]] = n
       } else {
