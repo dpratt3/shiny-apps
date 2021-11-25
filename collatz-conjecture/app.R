@@ -13,7 +13,7 @@ ui <- fluidPage(
     sidebarPanel(
       numericInput("bins", 
                    "Initial value:", 
-                   873, 
+                   989345275647, 
                    min = 4, 
                    max = 2^64), # Maximum accurate modulus value
       verbatimTextOutput("value"),
