@@ -83,8 +83,11 @@ server <- function(input, output) {
                                         "resetScale2d",
                                         "hoverClosestCartesian")) # hoverCompareCartesian
     
-    fig
-    
+    fig %>%      
+      config(plot_ly(),
+             toImageButtonOptions = list(filename = paste0('collatz_conj_', input$bins),
+                                        width = 600,
+                                        height =  400))
   })
   
   output$download <- downloadHandler(
