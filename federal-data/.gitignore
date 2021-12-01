@@ -51,4 +51,5 @@ po/*~
 # api-keys
 .api_key
 
-
+# Shiny deployment
+rsconnect
